@@ -17,6 +17,34 @@
         android:text="@string/name"
         android:textAlignment="center" />
 
+    <EditText
+        android:id="@+id/nickname_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textMultiLine|textPersonName"
+        android:text="Name"
+        android:textAlignment="center"
+        android:textStyle="normal" />
+
+    <Button
+        android:id="@+id/btn_done"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/layout_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/done" />
+
+    <TextView
+        android:id="@+id/nickname_text"
+        style="@style/NameStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:visibility="gone" />
+
     <ImageView
         android:id="@+id/star_Image"
         android:layout_width="match_parent"

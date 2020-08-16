@@ -15,4 +15,5 @@ SKELETON code of view hierarchy:
 
 </string>
     <string name="yellwsStar" />
+    <string name="done">DONE</string>
 </resources>
