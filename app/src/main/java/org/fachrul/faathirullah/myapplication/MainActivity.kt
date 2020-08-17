@@ -19,7 +19,10 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
+    private val myName:MyName = MyName("Fachrul Faathirullah")
+
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
 //        setContentView(R.layout.activity_main)
 //kegunaan data binding mempersingkat coding yang kita buat, idak perlu lagi menggunakan findViewById, menggunakan pattern MVVM
@@ -27,6 +30,7 @@ class MainActivity : AppCompatActivity() {
 //        findViewById<Button>(R.id.btn_done).setOnClickListener {
 //            addNickname(it)
 //        }
+        binding.myName = myName
         binding.btnDone.setOnClickListener {
             addNickname(it)
         }
@@ -36,8 +40,9 @@ class MainActivity : AppCompatActivity() {
     private fun addNickname(view: View){
 
         binding.apply {
-            nicknameText.text = binding.nicknameEdit.text
+//            nicknameText.text = binding.nicknameEdit.text
           // untuk me re create data
+            myName?.nickname = nicknameEdit.text.toString()
             invalidateAll()
             nicknameEdit.visibility = View.GONE
             btnDone.visibility = View.GONE
